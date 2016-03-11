@@ -7,8 +7,11 @@ import fr.lri.swingstates.canvas.CPolyLine;
 import fr.lri.swingstates.debug.StateMachineVisualization;
 import fr.lri.swingstates.sm.JStateMachine;
 import fr.lri.swingstates.sm.State ;
+import fr.lri.swingstates.sm.StateMachine;
 import fr.lri.swingstates.sm.StateMachineListener;
 import fr.lri.swingstates.sm.Transition ;
+import fr.lri.swingstates.sm.jtransitions.EnterOnJTag;
+import fr.lri.swingstates.sm.jtransitions.LeaveOnJTag;
 import fr.lri.swingstates.sm.transitions.Press ;
 import fr.lri.swingstates.sm.transitions.Drag ;
 import fr.lri.swingstates.sm.transitions.Release ;
@@ -63,10 +66,45 @@ class CrossingTrace extends CStateMachine {
     // ...
 };
 
+class CrossingTool extends JStateMachine {
+	public CrossingTool(Container pane) {
+		   // ...
+			super.attachTo(pane);
+	}
+	
+	State waitting = new State() {
+		Transition t1 = new Press(BUTTON1,NOMODIFIER, "=>crossing") {
+			public void action() {};
+		};
+		
+	};
+	
+	State crossing = new State() {
+		Transition t1 = new EnterOnJTag(AbstractButton.class.getName(), ">>clicking") {
+			public void action() {};
+		};
+		
+		Transition t2 = new Release("=>waitting") {
+			public void action() {};
+		};
 
-class MachineListener extends JStateMachine {
-	public MachineListener() {}
+	};
+	
+	State clicking = new State() {
+		
+		Transition t1 = new LeaveOnJTag(AbstractButton.class.getName(), "=> crossing") {
+			public void action() {
+				((AbstractButton)getComponent()).doClick();
+			};
+		};
+	
+		Transition t2 = new Release("=>waitting") {
+			public void action() {};
+		};
+	};
 }
+
+
 // --------------------------------------------------------------------------------------
 
 
@@ -80,15 +118,13 @@ public class CrossingDemo extends JFrame {
 		pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
 
 	   	Canvas canvas = new Canvas(getContentPane().getWidth(), getContentPane().getHeight()) ;
-	   	//new CrossingTrace(canvas) ;
+	   	new CrossingTrace(canvas) ;
 		CStateMachine sm = new CrossingTrace(canvas);
-		MachineListener ml = new MachineListener();
+		//MachineListener ml = new MachineListener();
+		
 
-		sm.addStateMachineListener(ml);
-		ml.attachTo(pane);
 
 		canvas.setOpaque(false);
-		//canvas.setVisible(true);
 
 		this.setGlassPane(canvas);
 		this.getGlassPane().setVisible(true);
@@ -109,17 +145,21 @@ public class CrossingDemo extends JFrame {
 		pane.add(useful);
 	   	//pane.add(canvas) ;
 
-		showStateMachine(sm);
+		//showStateMachine(sm);
+		CrossingTool crossingTool = new CrossingTool(canvas);
+		crossingTool.attachTo(this);
+		showStateMachine(crossingTool);
 		pack() ;
 	   	setVisible(true) ;
     }
 
-	public void showStateMachine(CStateMachine sm) {
+	public void showStateMachine(StateMachine sm) {
 		JFrame frame = new JFrame();
 		frame.getContentPane().add(new StateMachineVisualization(sm));
 		frame.pack();
 		frame.setVisible(true);
 	}
+
 
     static public void main(String args[]) {
 	   CrossingDemo demo = new CrossingDemo() ;
