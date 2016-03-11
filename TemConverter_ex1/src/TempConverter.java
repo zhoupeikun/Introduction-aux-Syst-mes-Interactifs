@@ -1,11 +1,11 @@
-package e1;
-
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
 public class TempConverter extends JFrame {
-dx
+
 	private JLabel labelC; // Name of the Celsius field
 	private JLabel labelF; // Name of the Fahrenheit field
 	private JTextField textFieldC; // Celsius field
@@ -49,17 +49,52 @@ dx
 	 * Listener of the Fahrenheit field: Convert the data from Fahrenheit to
 	 * Celsius when the "enter" keyboard button is hit (in the Fahrenheit field)
 	 */
-	// private ActionListener textFieldFListener = new ActionListener() {
-	// ...
-	// };
+	/*private ActionListener textFieldFListener = new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			String value = textFieldF.getText();
+			try {
+				float valF = new Float(value);
+				float valC = (valF - 32) / 1.8f;
+				textFieldC.setText(Float.toString(valC));
+			} catch (Exception exp) {
+				textFieldF.setText("");
+				textFieldC.setText("");
+			}
+		}
+	};*/
+
+	private KeyListener textFieldFListener = new KeyListener() {
+
+		@Override
+		public void keyTyped(KeyEvent e) {}
+
+		@Override
+		public void keyReleased(KeyEvent e) {
+			String value = textFieldF.getText();
+			try {
+				float valF = new Float(value);
+				float valC = (valF - 32) / 1.8f;
+				textFieldC.setText(Float.toString(valC));
+			} catch (Exception exp) {
+				textFieldF.setText("");
+				textFieldC.setText("");
+			}
+		}
+
+		@Override
+		public void keyPressed(KeyEvent e) {}
+	};
 
 	/*
 	 * Listener of the Reset button: Reset the value in the text field when the
 	 * Reset button is pressed
 	 */
-	// private ActionListener buttonResetListener = new ActionListener() {
-	// ...
-	// };
+	  private ActionListener buttonResetListener = new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			textFieldF.setText("");
+			textFieldC.setText("");
+		}
+	  };
 
 	/*
 	 * Listener of the Close button: Close the program window when the Close
