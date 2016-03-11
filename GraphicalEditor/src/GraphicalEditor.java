@@ -25,10 +25,7 @@ import java.awt.event.KeyEvent;
 import java.util.EventObject;
 import java.util.ArrayList;
 
-/**
- * @author Nicolas Roussel (roussel@lri.fr)
- * 
- */
+
 public class GraphicalEditor extends JFrame {
 
 	private Canvas canvas;

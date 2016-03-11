@@ -17,10 +17,7 @@ import java.awt.event.KeyEvent;
 
 import java.util.Hashtable;
 
-/**
- * @author Nicolas Roussel (roussel@lri.fr)
- * 
- */
+
 public class SelectionTool extends CStateMachine {
 
 	class SelectionTag extends CExtensionalTag {

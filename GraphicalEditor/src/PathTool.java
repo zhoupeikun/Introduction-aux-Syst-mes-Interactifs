@@ -9,10 +9,7 @@ import fr.lri.swingstates.sm.transitions.*;
 
 import java.awt.geom.Point2D;
 
-/**
- * @author Nicolas Roussel (roussel@lri.fr)
- * 
- */
+
 public class PathTool extends CStateMachine {
 
 	private CPolyLine line;

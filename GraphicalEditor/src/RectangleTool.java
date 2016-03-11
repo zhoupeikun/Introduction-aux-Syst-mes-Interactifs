@@ -8,10 +8,7 @@ import fr.lri.swingstates.sm.transitions.*;
 
 import java.awt.geom.Point2D;
 
-/**
- * @author Nicolas Roussel (roussel@lri.fr)
- * 
- */
+
 public class RectangleTool extends CStateMachine {
 
 	private CRectangle rect;
