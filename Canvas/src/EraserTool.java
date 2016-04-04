@@ -35,8 +35,10 @@ public class EraserTool extends CStateMachine{
 			Transition press = new Press(button, modifier, ">> draw") {
 				public void action() {
 					Canvas canvas = (Canvas) getEvent().getSource();
-					p1 = getPoint();
-					rect = canvas.newRectangle(p1, 1, 1);
+					//p1 = getPoint();
+					//rect = canvas.newRectangle(p1, 1, 1);
+					//rect = canvas.newRectangle(10, 10, 10, 10);
+                    rect.setStroke("");
 				}
 			};
 			Transition release = new Release(button, NOMODIFIER){
