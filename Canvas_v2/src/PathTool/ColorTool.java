@@ -6,12 +6,12 @@ public class ColorTool extends PenTool {
 	
 	private String color;
 	
-	ColorTool(String color){
+	public ColorTool(String color){
 		super("color");
 		this.color = color;
 	}
 	
-	String getColor(){
+	public String getColor(){
 		return this.color;
 	}
 }

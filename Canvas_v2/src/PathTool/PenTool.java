@@ -10,7 +10,7 @@ public class PenTool extends CShape{
 		this.type =  type;
 	}
 	
-	String getType(){
+	public String getType(){
 		return this.type;
 	}
 }

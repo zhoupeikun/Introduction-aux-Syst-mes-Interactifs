@@ -752,7 +752,7 @@
       <option name="number" value="Default" />
       <updated>1459803290464</updated>
       <workItem from="1459803292137" duration="41000" />
-      <workItem from="1459803460608" duration="1077000" />
+      <workItem from="1459803460608" duration="1116000" />
     </task>
     <task id="LOCAL-00001" summary="Eraser icons">
       <created>1459803853099</created>
@@ -766,11 +766,17 @@
       <option name="project" value="LOCAL" />
       <updated>1459803919844</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add EllipseTool">
+      <created>1459804579150</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1459804579150</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1118000" />
+    <option name="totallyTimeSpent" value="1157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="-4" width="1331" height="772" extended-state="6" />
@@ -814,7 +820,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Eraser icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eraser icons" />
+    <MESSAGE value="add EllipseTool" />
+    <option name="LAST_COMMIT_MESSAGE" value="add EllipseTool" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
