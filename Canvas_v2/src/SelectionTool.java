@@ -11,17 +11,13 @@ import fr.lri.swingstates.sm.Transition;
 import fr.lri.swingstates.canvas.transitions.*;
 import fr.lri.swingstates.sm.transitions.*;
 
+import java.awt.*;
 import java.awt.geom.Point2D;
-import java.awt.BasicStroke;
-import java.awt.Color;
 import java.awt.event.KeyEvent;
 
 import java.util.Hashtable;
 
-/**
- * @author Nicolas Roussel (roussel@lri.fr)
- * 
- */
+
 public class SelectionTool extends CStateMachine {
 
 	class SelectionTag extends CExtensionalTag {
@@ -96,6 +92,21 @@ public class SelectionTool extends CStateMachine {
 					consumes(true);
 				}
 			};
+/*			Transition iSelection = new PressOnTag(GraphicalEditor.ToolTag.class, button) {
+				public void action() {
+					Canvas canvas = (Canvas) getEvent().getSource();
+					//set cursor initial
+					canvas.setCursor(Cursor.getDefaultCursor());
+					System.out.println("SB");
+				}
+			};*/
+			Transition enterOntag= new EnterOnTag(GraphicalEditor.ToolTag.class) {
+					public void action() {
+						Canvas canvas = (Canvas) getEvent().getSource();
+						//set cursor initial
+						canvas.setCursor(Cursor.getDefaultCursor());
+					}
+			};
 			Transition deselectOne = new ReleaseOnTag(selectionTag, button,
 					CONTROL) {
 				public void action() {
@@ -154,6 +165,7 @@ public class SelectionTool extends CStateMachine {
 					selectionTag.translateBy(q.getX() - p.getX(),
 							q.getY() - p.getY());
 					p = q;
+
 				}
 			};
 			Transition stop = new Release(button, modifier, ">> idle") {

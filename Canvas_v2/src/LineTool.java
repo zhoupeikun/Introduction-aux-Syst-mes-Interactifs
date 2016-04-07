@@ -14,8 +14,7 @@ import fr.lri.swingstates.sm.State;
 import fr.lri.swingstates.sm.Transition;
 import fr.lri.swingstates.sm.transitions.*;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
+import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -135,6 +134,8 @@ public class LineTool extends CStateMachine {
 						}
 					}
 					tt.setStroke(new BasicStroke(4));
+					//set cursor initial
+					canvas.setCursor(Cursor.getDefaultCursor());
 				}
 			};
 

@@ -19,11 +19,14 @@ import fr.lri.swingstates.debug.StateMachineVisualization;
 import fr.lri.swingstates.sm.State;
 import fr.lri.swingstates.sm.StateMachine;
 import fr.lri.swingstates.sm.StateMachineListener;
-import fr.lri.swingstates.sm.Transition;
-;
+import fr.lri.swingstates.sm.Transition;;
 
 
-
+/**
+ * @author Honglin LI
+ * @author Peikun ZHOU
+ *
+ */
 public class GraphicalEditor extends JFrame {
 	
 	private Canvas canvas;
@@ -76,12 +79,13 @@ public class GraphicalEditor extends JFrame {
 
 		//palette = canvas.newRectangle(300, 20, 20, iconsize*3);
 		palette = canvas.newRectangle(20, 5, tools.size() * iconsize, 15);
-
+		palette.aboveAll();
 		CText ptitle = canvas.newText(0, 0, "TOOLS", new Font("verdana",
 				Font.PLAIN, 12));
 		ptitle.setParent(palette);
 		ptitle.setReferencePoint(0.5, 0.5).translateTo(palette.getCenterX(),
 				palette.getCenterY());
+		ptitle.aboveAll();
 		CStateMachine cm = new CStateMachine() {
 			State start = new State() {
 				Transition changeTool = new PressOnTag(ToolTag.class, BUTTON1,
@@ -100,7 +104,8 @@ public class GraphicalEditor extends JFrame {
 						consumes(true);
 					}
 				};
-				Transition enterTag = new EnterOnTag(ToolTag.class){
+
+/*				Transition enterTag = new EnterOnTag(ToolTag.class){
 					public void action(){
 						ToolTag tt = (ToolTag) getTag();
 						canvas.getTag(ToolTag.class).setStroke(
@@ -110,7 +115,7 @@ public class GraphicalEditor extends JFrame {
 						//set cursor initial
 						canvas.setCursor(Cursor.getDefaultCursor());
 					}
-				};
+				};*/
 			};
 		};
 		cm.attachTo(canvas);
@@ -128,6 +133,7 @@ public class GraphicalEditor extends JFrame {
 					+ tool.getClass().getName() + ".png");
 			s.setParent(palette);
 			s.addTag(new ToolTag(tool));
+
 		}
         //set the frame visible
 		pack();

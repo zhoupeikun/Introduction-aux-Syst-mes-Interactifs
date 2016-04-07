@@ -75,7 +75,6 @@ public class EllipseTool extends CStateMachine {
 					ell = canvas.newEllipse(p1, 1, 1);
 					ell.setStroke(new BasicStroke(getPenSize()));
 					ell.setFillPaint(getPenColor());
-
 				}
 			};
 
@@ -105,6 +104,8 @@ public class EllipseTool extends CStateMachine {
 						menuCreated = true;
 
 					}
+					//set cursor initial
+					canvas.setCursor(Cursor.getDefaultCursor());
 				}
 			};
 		};

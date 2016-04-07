@@ -17,7 +17,7 @@ import java.util.LinkedList;
 import static PathTool.PathTool.showStateMachine;
 
 /**
- * Created by peikun on 4/4/16.
+ * Created by Peikun on 4/4/16.
  */
 public class EraserTool extends CStateMachine {
 
