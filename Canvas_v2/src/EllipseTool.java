@@ -164,7 +164,7 @@ public class EllipseTool extends CStateMachine {
 			Transition stop = new Release(button, modifier, ">> start") {
 				public void action() {
 					ell.setDiagonal(p1, getPoint());
-					//fireEvent(new ShapeCreatedEvent(EllipseTool.this, ell));
+					fireEvent(new ShapeCreatedEvent(EllipseTool.this, ell));
 				}
 			};
 		};
