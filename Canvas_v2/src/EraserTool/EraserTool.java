@@ -9,6 +9,7 @@ import fr.lri.swingstates.sm.transitions.Drag;
 import fr.lri.swingstates.sm.transitions.Press;
 import fr.lri.swingstates.sm.transitions.Release;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -30,6 +31,7 @@ public class EraserTool extends CStateMachine {
     private ArrayList<GommeTool> eraserTools;
     private boolean menuCreated = false;
     private CShape eraserPalette;
+
 
     class EraserTag extends CExtensionalTag {
         private String type;
@@ -110,6 +112,7 @@ public class EraserTool extends CStateMachine {
 
             Transition enter = new DragOnTag(EraserTag.class, button) {
 
+
                 public void action() {
                     Canvas canvas = (Canvas) getEvent().getSource();
                     EraserTag tt = (EraserTag) getTag();
@@ -119,11 +122,15 @@ public class EraserTool extends CStateMachine {
 
                     String type = tt.getType();
                     setEraserSize((SizeTool) tt.getGommeTool());
-                    System.out.println("erasersize=" + getEraserSize());
+                    System.out.println("eraserSize=" + getEraserSize());
                     for (CShape c : groupSize) {
                             c.setStroke(new BasicStroke(1));
                         }
                     tt.setStroke(new BasicStroke(4));
+
+                    canvas.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+                            new ImageIcon("resources/eraser" + getEraserSize() +".png").getImage(),
+                            new Point(canvas.getX(), canvas.getY()),""));
                 }
             };
 
