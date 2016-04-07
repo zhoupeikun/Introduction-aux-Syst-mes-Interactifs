@@ -163,8 +163,7 @@ public class  PathTool extends CStateMachine {
 
 					canvas.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
 							new ImageIcon("resources/Pentool.png").getImage(),
-							new Point(canvas.getX(), canvas.getY()),""));
-
+							new Point(canvas.getX()+5, canvas.getY()+45),""));
 				}
 			};
 			
