@@ -72,7 +72,7 @@ public class EraserTool extends CStateMachine {
                     Canvas canvas = (Canvas) getEvent().getSource();
 
                     if (!menuCreated) {
-                        eraserPalette = canvas.newRectangle(212, 70, iconsize * 3, 50);
+                        eraserPalette = canvas.newRectangle(212, 70, iconsize * 3, 48);
 
                         for (int i = 0; i < 3; i++) {
                             GommeTool tool = eraserTools.get(i);
@@ -123,7 +123,7 @@ public class EraserTool extends CStateMachine {
                     for (CShape c : groupSize) {
                             c.setStroke(new BasicStroke(1));
                         }
-                    tt.setStroke(new BasicStroke(10));
+                    tt.setStroke(new BasicStroke(4));
                 }
             };
 

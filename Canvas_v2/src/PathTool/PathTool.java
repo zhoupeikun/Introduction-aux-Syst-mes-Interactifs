@@ -158,7 +158,7 @@ public class  PathTool extends CStateMachine {
 							c.setStroke(new BasicStroke(1));
 						}
 					}
-					tt.setStroke(new BasicStroke(10));
+					tt.setStroke(new BasicStroke(4));
 				}
 			};
 			
