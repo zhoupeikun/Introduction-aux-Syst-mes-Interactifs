@@ -78,7 +78,10 @@ public class GraphicalEditor extends JFrame {
 
 
 		//palette = canvas.newRectangle(300, 20, 20, iconsize*3);
+		//Canvas weightCanvas = new Canvas();
+		//weightCanvas.addShape(palette);
 		palette = canvas.newRectangle(20, 5, tools.size() * iconsize, 15);
+		//weightCanvas.addShape(palette);
 		palette.aboveAll();
 		CText ptitle = canvas.newText(0, 0, "TOOLS", new Font("verdana",
 				Font.PLAIN, 12));
