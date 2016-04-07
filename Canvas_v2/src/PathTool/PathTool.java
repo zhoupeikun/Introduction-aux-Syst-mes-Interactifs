@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.EventObject ;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
 
 /**
@@ -112,6 +112,7 @@ public class  PathTool extends CStateMachine {
 						menuCreated = true;
 						
 					}
+					canvas.setCursor(Cursor.getDefaultCursor());
 				}
 			};
 			Transition press =  new Press(button, modifier,"=>draw"){
@@ -159,6 +160,11 @@ public class  PathTool extends CStateMachine {
 						}
 					}
 					tt.setStroke(new BasicStroke(4));
+
+					canvas.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+							new ImageIcon("resources/Pentool.png").getImage(),
+							new Point(canvas.getX(), canvas.getY()),""));
+
 				}
 			};
 			
@@ -189,7 +195,7 @@ public class  PathTool extends CStateMachine {
 			Transition stop = new Release(button, modifier,"=>start") {
 				public void action() {
 					line.lineTo(getPoint());
-					//fireEvent(new ShapeCreatedEvent(PathTool.PathTool.this, line));
+					//fireEvent(new ShapeCreatedEvent(PathTool.this, line));
 				}
 			};
 		};

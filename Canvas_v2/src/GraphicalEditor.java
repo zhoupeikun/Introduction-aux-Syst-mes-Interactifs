@@ -1,8 +1,5 @@
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Font;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.EventObject;
 
@@ -53,8 +50,8 @@ public class GraphicalEditor extends JFrame {
 	private StateMachineListener smlistener = new StateMachineListener() {
 		public void eventOccured(EventObject e) {
 			ShapeCreatedEvent csce = (ShapeCreatedEvent) e;
-			csce.getShape().addTag(selector.getBaseTag())
-					.setFillPaint(Color.white);
+			csce.getShape().addTag(selector.getBaseTag());
+					/*.setFillPaint(Color.white);*/
 			new CHierarchyTag(palette).aboveAll();
 		}
 	};
@@ -103,13 +100,15 @@ public class GraphicalEditor extends JFrame {
 						consumes(true);
 					}
 				};
-				Transition enterTag = new EnterOnTag(ToolTag.class, BUTTON1){
+				Transition enterTag = new EnterOnTag(ToolTag.class){
 					public void action(){
 						ToolTag tt = (ToolTag) getTag();
 						canvas.getTag(ToolTag.class).setStroke(
 								new BasicStroke(1));
 						tt.setStroke(new BasicStroke(4));
 						tt.aboveAll();
+						//set cursor initial
+						canvas.setCursor(Cursor.getDefaultCursor());
 					}
 				};
 			};
