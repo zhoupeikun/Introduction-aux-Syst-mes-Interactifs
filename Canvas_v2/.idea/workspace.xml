@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f536800e-5941-4138-9e0c-c2bd2fb5dace" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EllipseTool.java" afterPath="$PROJECT_DIR$/src/EllipseTool.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EraserTool/EraserTool.java" afterPath="$PROJECT_DIR$/src/EraserTool/EraserTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GraphicalEditor.java" afterPath="$PROJECT_DIR$/src/GraphicalEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LineTool.java" afterPath="$PROJECT_DIR$/src/LineTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SelectionTool.java" afterPath="$PROJECT_DIR$/src/SelectionTool.java" />
     </list>
     <list id="38148a94-3eac-4783-a17d-92fe5ef414c8" name="New changelist" comment="" />
     <ignored path="Canvas_v2.iws" />
@@ -41,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LineTool.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LineTool.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LineTool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61227787">
-              <caret line="137" column="40" selection-start-line="137" selection-start-column="40" selection-end-line="137" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="131" column="49" selection-start-line="131" selection-start-column="49" selection-end-line="131" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -73,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EraserTool.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EraserTool.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EraserTool/EraserTool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="139" column="62" selection-start-line="139" selection-start-column="62" selection-end-line="139" selection-end-column="62" />
+            <state vertical-scroll-proportion="2.0565429">
+              <caret line="147" column="60" selection-start-line="147" selection-start-column="60" selection-end-line="147" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,8 +86,8 @@
       <file leaf-file-name="EllipseTool.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EllipseTool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="10.961538">
-              <caret line="76" column="52" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -111,11 +109,11 @@
         <option value="$PROJECT_DIR$/src/PathTool/PenTool.java" />
         <option value="$PROJECT_DIR$/src/PathTool/ShapeCreatedEvent.java" />
         <option value="$PROJECT_DIR$/src/PathTool/PathTool.java" />
-        <option value="$PROJECT_DIR$/src/EraserTool/EraserTool.java" />
         <option value="$PROJECT_DIR$/src/GraphicalEditor.java" />
         <option value="$PROJECT_DIR$/src/LineTool.java" />
         <option value="$PROJECT_DIR$/src/EllipseTool.java" />
         <option value="$PROJECT_DIR$/src/SelectionTool.java" />
+        <option value="$PROJECT_DIR$/src/EraserTool/EraserTool.java" />
       </list>
     </option>
   </component>
@@ -233,7 +231,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../swingstates-1.0.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Canvas_v2.userlibraries" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -771,7 +769,7 @@
       <updated>1459803290464</updated>
       <workItem from="1459803292137" duration="41000" />
       <workItem from="1459803460608" duration="1599000" />
-      <workItem from="1460031830974" duration="16322000" />
+      <workItem from="1460031830974" duration="18807000" />
     </task>
     <task id="LOCAL-00001" summary="Eraser icons">
       <created>1459803853099</created>
@@ -833,11 +831,17 @@
       <option name="project" value="LOCAL" />
       <updated>1460044674155</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="enonTag">
+      <created>1460050346558</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1460050346558</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17962000" />
+    <option name="totallyTimeSpent" value="20447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="24" width="1331" height="744" extended-state="6" />
@@ -889,7 +893,8 @@
     <MESSAGE value="add pen ico" />
     <MESSAGE value="fireEvent" />
     <MESSAGE value="make pen cursor more precise" />
-    <option name="LAST_COMMIT_MESSAGE" value="make pen cursor more precise" />
+    <MESSAGE value="enonTag" />
+    <option name="LAST_COMMIT_MESSAGE" value="enonTag" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -953,28 +958,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EllipseTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.961538">
-          <caret line="76" column="52" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EraserTool/EraserTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="139" column="62" selection-start-line="139" selection-start-column="62" selection-end-line="139" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GraphicalEditor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="115" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EllipseTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -989,6 +984,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LineTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="49" selection-start-line="131" selection-start-column="49" selection-end-line="131" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SelectionTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -997,11 +1000,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LineTool.java">
+    <entry file="file://$PROJECT_DIR$/src/EraserTool/EraserTool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61227787">
-          <caret line="137" column="40" selection-start-line="137" selection-start-column="40" selection-end-line="137" selection-end-column="40" />
-          <folding />
+        <state vertical-scroll-proportion="2.0565429">
+          <caret line="147" column="60" selection-start-line="147" selection-start-column="60" selection-end-line="147" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

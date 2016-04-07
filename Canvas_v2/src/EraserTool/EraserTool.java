@@ -128,9 +128,15 @@ public class EraserTool extends CStateMachine {
                         }
                     tt.setStroke(new BasicStroke(4));
 
-                    canvas.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
-                            new ImageIcon("resources/eraser" + getEraserSize() +".png").getImage(),
-                            new Point(canvas.getX(), canvas.getY()),""));
+                    if (getEraserSize()>30) {
+                        canvas.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+                                new ImageIcon("resources/eraser" + getEraserSize() + ".png").getImage(),
+                                new Point(canvas.getX() + 5, canvas.getY() + 45), ""));
+                    } else{
+                        canvas.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+                                new ImageIcon("resources/eraser" + getEraserSize() + ".png").getImage(),
+                                new Point(canvas.getX(), canvas.getY()), ""));
+                    }
                 }
             };
 

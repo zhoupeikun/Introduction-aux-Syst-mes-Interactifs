@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="/media/program/LaVieEnFrance/Master/m1-2/isi/swingstates.zip"/>
-	<classpathentry kind="lib" path="/media/program/LaVieEnFrance/Master/m1-2/isi/tp4/SwingStates.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry exported="true" kind="lib" path="/home/peikun/Documents/M1/Introduction-aux-Syst-mes-Interactifs/swingstates-1.0.0.jar"/>
+	<classpathentry kind="output" path="out/production/Canvas_v2"/>
 </classpath>
